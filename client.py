@@ -13,6 +13,7 @@ def win(player):
 def check():
     global turn
     turn +=1
+        
     b1=bt1['text']
     b2=bt2['text']
     b3=bt3['text']
@@ -22,6 +23,7 @@ def check():
     b7=bt7['text']
     b8=bt8['text']
     b9=bt9['text']
+    
     if (b1==b2 and b2==b3 and b1 =='O') or (b1==b2 and b2==b3 and b1 =='X'):
         win(b1)
     if (b4==b5 and b5==b6 and b4 =='O') or (b4==b5 and b5==b6 and b4 =='X'):
@@ -39,7 +41,6 @@ def check():
     if (b3==b5 and b5==b7 and b3 =='O') or (b3==b5 and b5==b7 and b3 =='X'):
         win(b3)
         
-player =1
 def clicked1():
     global player
     if bt1['text']==" ":
@@ -188,7 +189,7 @@ button_list.append(bt9)
     
 s = socket(AF_INET, SOCK_STREAM)
 
-s.connect(('127.0.0.1', 7226))
+s.connect(('127.0.0.1', 7228))
 
 def receive_message():
     while True:

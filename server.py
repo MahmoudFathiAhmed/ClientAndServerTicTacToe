@@ -3,13 +3,12 @@ from tkinter import messagebox
 from socket import *
 from threading import Thread
 
-player = 2
+player = 1
 turn = 1
 
 def win(player):
     messagebox.showinfo(title = "Congratulation",message = 'winner is ' + player )
     wind.destroy()
-turn = 1
 
 def check():
     
@@ -190,7 +189,7 @@ button_list.append(bt9)
 s = socket(AF_INET,SOCK_STREAM)
 
 
-s.bind(('127.0.0.1', 7226))
+s.bind(('127.0.0.1', 7228))
 s.listen(5)
 c=None
 
